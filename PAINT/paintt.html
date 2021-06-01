@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAINT</title>
+    <link rel="stylesheet" href="css/paintt.css">
+    
+   <style>  
+  
+
+    </style>
+
+</head>
+
+<body>
+    
+    <center>
+        <h1>Paint</h1>
+    </center>
+
+    <div id="padre">
+    <canvas id="canvas" width="600" height="400">
+    </div>
+
+    <div id="hermana">
+    <center>  
+    <h3>PALETA DE COLOR:</h3>
+    <input type="color" onchange="colorLinea(this)">
+
+    <h3><input id='Rell' type="checkbox" value="Relleno" />RELLENAR<br></h3>
+      
+    <h3>HERRAMIENTAS:</h3>    
+
+        <div class="btn-group">
+        <button onclick="myFunction()"><img src="iconos/lavado-en-seco 1.png"></button>
+        <button onclick="myFunction()"><img src="iconos/lapiz 3.png"></button>
+        <button onclick="myFunction()"><img src="iconos/fuente 3.png"></button>
+        <button onclick="myFunction()"><img src="iconos/variante-de-contorno-de-triangulo 1.png"></button>
+        <button onclick="myFunction()"><img src="iconos/triangulo-rectangulo 1.png"></button>
+        <button onclick="myFunction()"><img src="iconos/contorno-de-forma-rectangular 1.png"></button>
+        <button onclick="myFunction()"><img src="iconos/esquema-de-rombo 1.png"></button>
+        <button onclick="myFunction()"><img src="iconos/forma-de-contorno-del-pentagono 1.png"></button>
+        <button onclick="myFunction()"><img src="iconos/hexagono 1.png"></button>
+        </div>
+
+        <h3>LINEA</h3>
+        <input type="range" onchange="anchoLinea(this)"
+        max="50"
+        min="1"
+        value = "1"><span id="valor">1</span>
+
+        </center>
+    </div>
+
+
+    <div id="hermano">
+        <center> 
+        <form>
+           <h3>
+               ANIMACIONES
+           </h3>
+            <Select>
+                <option disabled selected="">Seleccione una animación</
+                option>
+                <option>anime1</option>
+                <option>anime2</option>
+                <option>anime3</option>
+                <option>anime4</option>
+                <option>anime5</option>
+            </Select>
+        </form>
+        
+        <h3>
+        <label>Valor en X: </label>
+        <input type="text" id="valX" placeholder=""
+        class="entrada margen-inferior">
+        </h3>
+
+        <h3>
+        <label>Valor en Y: </label>
+        <input type="text" id="valY" placeholder=""
+        class="entrada margen-superior">
+        </h3>
+
+        <h3>
+        <label>Angulo: </label>
+        <input type="text" id="valY" placeholder=""
+        class="entrada">
+        </h3>
+
+        <h3>LIMPIAR </h3>
+        <input type="button" value="LIMPIA" onclick="limpiar()" class="limp">
+       
+        
+        <h3>
+        <input id='Ani' type="checkbox" value="Anime" />ANIMAR<br>
+        </h3>
+
+        <h3>ANIMACION</h3>
+        <input type="button"  value="ANIME" onclick="animar()"class="anim">
+        </center> 
+    </div>
+
+
+ 
+
+
+
+    <script src=""></script>
+</body>
+</html>
+
+
