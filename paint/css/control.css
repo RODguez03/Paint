@@ -1,0 +1,56 @@
+#canvas{
+    border: 1px solid #000
+}
+
+#cuadro{
+    display: flex;
+    justify-content: space-around;
+}
+
+#main{
+    border: 1px solid #000;
+    width: 200px;
+}
+
+#animaciones{
+    border: 1px solid #000;
+    width: 200px;
+}
+
+#lista{
+    margin-block-end: 10px;
+    border-radius: 5px;
+}
+
+.margen{
+    margin-top: 20px;
+}
+
+.margen-color{
+    margin-block-end: 50px;
+    border-radius: 10px;
+}
+
+.tools{
+    border: 1px solid #000;
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+.boton{
+    border: 1px solid #000;
+    height: 50px;
+    border-radius: 3px;
+    width: 100px;
+    margin-block-end: 50px;
+}
+
+.label{
+    border: 1px solid #000;
+    height: 25px;
+    border-radius: 3px;
+    width: 60%;
+    margin-block-end: 50px;
+}

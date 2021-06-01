@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <link rel="stylesheet" href="css/control.css">
+</head>
+<body>
+    <center>
+        <h1>TITULO</h1>
+        <div id="cuadro">
+            <section id="main">
+                <h3>Paleta de colores</h3>
+                <input type="color" onchange="color(this)" class="margen-color"><br>
+
+                <h3><input type="checkbox" id="Rellenar" value="Relleno"> Rellenar</h3><br>
+
+                <h3>Herramientas</h3>
+                <input type="image" src="lapiz.png" id="lapiz" class="tools">
+                <input type="image" src="texto.png" class="tools">
+                <input type="image" src="triangulo.png" class="tools"><br>
+                <input type="image" src="circilo.png" class="tools">
+                <input type="image" src="rectangulo.png" class="tools">
+                <input type="image" src="escuadra.png" class="tools"><br>
+                <input type="image" src="pentagono.png" class="tools">
+                <input type="image" src="rombo.png" class="tools">
+                <input type="image" src="hexagono.png" class="tools"><hr size="50" color="white">
+
+                <h3>Tamaño</h3>
+                <input type="range" onchange="ancho(this)" max="200" min="1" value="1"><span id="valor">1</span><br>
+            </section>
+    
+            <canvas id="canvas" width="800" height="600"></canvas>
+
+            <section id="animaciones">
+                <h2>ANIMACIONES</h2>
+                <select id="lista" onchange="list();">
+                    <option> Animaciones </option>
+                    <option value="1">Rotación</option>
+                    <option value="2">Traslación</option>
+                    <option value="3">Sesgado</option>
+                    <option value="4">Escalamiento unifome</option>
+                    <option value="5">Escalamiento diferencial</option>
+                </select><hr size="5" color="white">
+                
+                Valor en X: <br> <input type="text" id="valorx" class="label"><br>
+                
+                Valor en Y: <br> <input type="text" id="valory" class="label"><br>
+                
+                Ángulo: <br> <input type="text" id="valorx" class="label">
+
+                <input type="button" value="Animar" class="boton">
+
+                <input type="button" value="Limpiar" onclick="limpiar()" class="boton">
+            </section>
+        </div>
+    </center>
+</body>
+</html>
