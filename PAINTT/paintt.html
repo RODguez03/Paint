@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAINT</title>
+    <link rel="stylesheet" href="css/paintt.css">
+    
+   <style>  
+  
+
+    </style>
+
+</head>
+
+<body>
+<center>
+    <h1>Paint</h1>
+    <div id="padre">
+        <div id="hermana">
+            <h3>PALETA DE COLOR:</h3>
+            <input type="color" onchange="colorLinea(this)">
+            <hr size="20" color="white">
+            
+            <h3><input id='Rell' type="checkbox" value="Relleno" />RELLENAR<br></h3>
+            <hr size="20" color="white">
+      
+            <h3>HERRAMIENTAS:</h3>    
+            <div class="btn-group">
+            <img src="iconos/linea.png" class="btn-tools" id="linea">
+            <img src="iconos/oval.png" class="btn-tools" id="circulo">
+            <img src="iconos/lapiz.png" class="btn-tools" id="lapiz">
+            <img src="iconos/triangulo.png" class="btn-tools" id="triangulo">
+            <img src="iconos/triangulo-rectangulo 1.png" class="btn-tools" id="escuadra">
+            <img src="iconos/contorno-de-forma-rectangular.png" class="btn-tools" id="rectangulo">
+            <img src="iconos/esquema-de-rombo.png" class="btn-tools" id="rombo">
+            <img src="iconos/forma-de-contorno-del-pentagono.png" class="btn-tools" id="pentagono"> 
+            <img src="iconos/hexagono.png" class="btn-tools" id="hexagono">
+            </div>
+            <hr size="20" color="white">
+
+        <h3>LINEA</h3>
+        <input type="range" onchange="anchoLinea(this)"
+        max="50"
+        min="1"
+        value = "1"><span id="valor">0</span>
+        </div>
+
+        <canvas id="canvas" width="800" height="600"></canvas>
+
+        <div id="hermano">
+               <h3>ANIMACIONES</h3>
+                <Select>
+                    <option disabled selected="">Seleccione una animación</option>
+                    <option>anime1</option>
+                    <option>anime2</option>
+                    <option>anime3</option>
+                    <option>anime4</option>
+                    <option>anime5</option>
+                </Select>
+            
+            <h3>
+            <label>Valor en X: </label>
+            <input type="text" id="valX" placeholder=""
+            class="entrada margen-inferior">
+            </h3>
+    
+            <h3>
+            <label>Valor en Y: </label>
+            <input type="text" id="valY" placeholder=""
+            class="entrada margen-superior">
+            </h3>
+    
+            <h3>
+            <label>Angulo: </label>
+            <input type="text" id="valY" placeholder=""
+            class="entrada">
+            </h3>
+    
+            <h3>LIMPIAR </h3>
+            <input type="button" value="LIMPIA" onclick="limpiar()" class="boton">
+           
+            
+            <h3>
+            <input id='Ani' type="checkbox" value="Anime" />ANIMAR<br>
+            </h3>
+    
+            <h3>ANIMACION</h3>
+            <input type="button"  value="ANIME" onclick="animar()"class="boton">
+        </div>
+    
+    </div>
+</center>
+
+    <script src=""></script>
+</body>
+</html>
+
+
