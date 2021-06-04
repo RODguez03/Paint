@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <link rel="stylesheet" href="css/core.css">
+    <title>Paint</title>
+</head>
+<body>
+    
+    <canvas id= 'canvas' width="800" height="300"></canvas><br>
+    <input type="color" name="color" oninput="defcolor(this.value);">
+    <input type="range" id="grosor" oninput="defgrosor(this.value);" min="1" max="10" value="1">
+
+
+    <input id="btnLimpiar" type ="button" value="Limpiar"/> 
+    <input id="btnDibujo" type ="button" value="Dibujo"/> 
+    <input id="btnLinea" type ="button" value="Linea"/> <br> <br>
+
+    <input id='Relleno' type="checkbox" value="Relleno" />Relleno<br>
+    <input id="btnRectangulo" type ="button" value="Rectangulo"/> 
+    <input id="btnCirculo" type ="button" value="Circulo"/> 
+    
+    
+    <input id="btnTrianguloEqulilatero" type ="button" value="Triangulo"/> 
+    <input id="btnTrianguloRectangulo" type ="button" value="Triangulo Rectangulo"/><br> 
+    <input id="btnRombo" type ="button" value="Rombo"/> 
+    <input id="btnPentagono" type ="button" value="Pentagono"/> 
+    <input id="btnHexagono" type ="button" value="Hexagono"/> 
+    <input id="btnHeptagono" type ="button" value="Heptagono"/> 
+
+    <script src="js/Core2.js"></script>
+
+
+
+</body>
+</html>
