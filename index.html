@@ -10,7 +10,7 @@
     </style>
 </head>
 <body>
-    <canvas id= 'canvas' width="800" height="300"></canvas><br>
+    <canvas id= 'canvas' width="700" height="300"></canvas><br>
     <input type="color" name="color" oninput="defcolor(this.value);">
     <input type="range" id="grosor" oninput="defgrosor(this.value);" min="1" max="10"
     value="1">
@@ -23,12 +23,39 @@
     
     
     <input id="btnTrianguloEqulilatero" type ="button" value="Triangulo"/> 
-    <input id="btnTrianguloRectangulo" type ="button" value="Triangulo Rectangulo"/><br> 
+    <input id="btnTrianguloRectangulo" type ="button" value="Triangulo Rectangulo"/>
     <input id="btnRombo" type ="button" value="Rombo"/> 
     <input id="btnPentagono" type ="button" value="Pentagono"/> 
-    <input id="btnHexagono" type ="button" value="Hexagono"/> 
+    <input id="btnHexagono" type ="button" value="Hexagono"/> <br>
+
+    Animaciones<br>
+    <select id="select" name="menu" onchange= "myFunction(this)">
+        <option value="Value 1" selected>--Seleccionar--</option>
+        <option value="value 2" >Traslacion X</option>
+        <option value="value 5" >Traslacion Y</option>
+        <option value="value 3" >Escalamiento Uniforme </option>
+        <option value="value 4">Escalamiento Diferencial</option> 
+    </select>
+    <select id="figura" name="tipoFug" onchange= "myFunction2(this)">
+        <option value="value 1" selected>--Seleccionar--</option>
+        <option value="value 2" >Rectangulo</option>
+        <option value="value 3" >Circulo </option>
+        <option value="value 4">Triangulo</option> 
+        <option value="value 5">Triangulo Rectangulo</option> 
+        <option value="value 6">Rombo</option> 
+    </select><br>
+    <label>  Valor X: </label>
+        <input type="text" id="ValorX" disabled = "true"/>
+    
+            <label>  Valor Y: </label>
+        <input type="text" id="ValorY" disabled = "true"/><br>
+    
+    <input id="btnAnimacion" type ="button" value="Animar"/> 
+    
+
 
     <script src="js/Core.js"></script>
     <script src="js/Fuguras.js"></script>
+    <script src="js/Animaciones.js"></script>
 </body>
 </html>

@@ -18,11 +18,6 @@ let canvas = document.getElementById('canvas'),
         cxt.clearRect(0,0,canvas.width,canvas.height)
         }) 
     
-    //boton de mano alzada
-    btnDibujo.addEventListener('click', function(){
-        dibujar();  
-        })      
-
         //boton de rectangulo
     btnRectangulo.addEventListener('click', function(){
         rectangulo();  
@@ -62,6 +57,11 @@ let canvas = document.getElementById('canvas'),
         Hexagono();  
         })
 
+
+         //boton de mano alzada
+    btnDibujo.addEventListener('click', function(){
+        dibujar();  
+        })     
 
        //metodos
     

@@ -2,7 +2,6 @@
  
 function poligono(n,x,y,x1,y1){
     if (n<=7){
-        console.log("paso por pilo")
         r=(x1-x)/2
         cx=(x1-x)/2+x;
         cy=(y1-y)/2+y;
