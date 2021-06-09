@@ -138,4 +138,5 @@ if(checkBox.checked == true){
     cxt.stroke();
     cxt.closePath();
     }
+          
 }

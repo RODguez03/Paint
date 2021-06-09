@@ -67,49 +67,48 @@ let canvas = document.getElementById('canvas'),
     
     // bubujo a mano alzada 
     function dibujar(){
-        n=15
+        n=16
         //punto de inicio
         canvas.addEventListener('mousedown', function(e){
             x=e.clientX - rect.left;
             y=e.clientY - rect.top;
-            console.log(x,y)
             dibujando=true;
         });
         // movimiento 
         canvas.addEventListener('mousemove',function(e){
         if(dibujando===true){
-            poligono(n,x,y,e.clientX - rect.left,e.clientY - rect.top)
+            if(n==16){
+            poligono(15,x,y,e.clientX - rect.left,e.clientY - rect.top)
             x = e.clientX - rect.left;
-            y = e.clientY - rect.top;
+            y = e.clientY - rect.top;}
         }
         });
         //punto final
         canvas.addEventListener('mouseup',function(e){
         if(dibujando===true){
-            poligono(n,x,y,e.clientX - rect.left,e.clientY - rect.top)
-            dibujando=false;
+            if(n==16){
+            poligono(15,x,y,e.clientX - rect.left,e.clientY - rect.top)
+            dibujando=false;}
         }
         })
-       
         }
 
      // bubujo de rectangulo 
     function rectangulo(){
         // numero figura
         n = 10;
+        dibujando=false;
         canvas.addEventListener('mousedown', function(e){
         x=e.clientX-rect.left;
         y=e.clientY-rect.top;
-        dibujando=true;
         });
     
         canvas.addEventListener('mouseup',function(e){
-        if(dibujando===true){
+        //if(dibujando===true){
             x1=e.clientX-rect.left;
             y1=e.clientY-rect.top;
             poligono(n,x,y,x1,y1)
-            dibujando=false;
-        }}) 
+        }) 
         }
 
     // bidujo circulo 

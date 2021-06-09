@@ -3,12 +3,8 @@
     posx= document.getElementById('ValorX'),
     posy= document.getElementById('ValorY'),
     figura=document.getElementById('figura')
-    posIniyX=100,
-    posIniyY=0
-
-    // cuadro inicial
-    //cxt.fillStyle= color
-    //cxt.fillRect(posIniyX,posIniyY,60,60)
+let posIniyX=(canvas.width/5);
+let posIniyY= (canvas.height/5);
 
 btnAnimacion.addEventListener('click',slowMotion)
 //Animaciones 
@@ -32,6 +28,10 @@ function slowMotion(){
             poligono(14,posIniyX,posIniyY,posIniyX+80,posIniyY+80) }
         if (figura.value=='value 6'){
             poligono(4,posIniyX,posIniyY,posIniyX+80,posIniyY+80) }
+        if (figura.value=='value 7'){
+            poligono(5,posIniyX,posIniyY,posIniyX+80,posIniyY+80) }
+        if (figura.value=='value 8'){
+                poligono(6,posIniyX,posIniyY,posIniyX+80,posIniyY+80) }
         if (posIniyX <= posx.value) {
         slowMotion();}else {
             posIniyX=30
@@ -55,7 +55,13 @@ function slowMotion(){
             poligono(14,posIniyX,posIniyY,posIniyX+ancho,posIniyY+alto) }
         if (figura.value=='value 6'){
             ancho=80*posx.value,alto=80*posx.value;
-            poligono(4,posIniyX,posIniyY,posIniyX+ancho,posIniyY+alto) } 
+            poligono(4,posIniyX,posIniyY,posIniyX+ancho,posIniyY+alto) }
+        if (figura.value=='value 7'){
+            ancho=80*posx.value,alto=80*posx.value;
+            poligono(5,posIniyX,posIniyY,posIniyX+ancho,posIniyY+alto) } 
+        if (figura.value=='value 8'){
+            ancho=80*posx.value,alto=80*posx.value;
+            poligono(6,posIniyX,posIniyY,posIniyX+ancho,posIniyY+alto) }
     }
     //escalamiento diferencial
     if (select.value=='value 4'){
@@ -73,13 +79,15 @@ function slowMotion(){
         if (figura.value=='value 5'){
             ancho=80*posx.value, alto=80*posy.value;
             poligono(14,posIniyX,posIniyY,posIniyX+ancho,posIniyY+alto)}
-        
-        
-        
-        
-            if (figura.value=='value 6'){
+        if (figura.value=='value 6'){
             ancho=80*posx.value, alto=80*posy.value;
-            poligono(4,posIniyX-ancho,posIniyY-alto,posIniyX,posIniyY)} 
+            poligono(4,posIniyX,posIniyY,ancho,alto)} 
+        if (figura.value=='value 7'){
+            ancho=80*posx.value, alto=80*posy.value;
+            poligono(5,posIniyX,posIniyY,ancho,alto)} 
+        if (figura.value=='value 8'){
+            ancho=80*posx.value, alto=80*posy.value;
+            poligono(6,posIniyX,posIniyY,ancho,alto)} 
     }
     //Traslacion en Y
     if (select.value=='value 5'){
@@ -100,6 +108,10 @@ function slowMotion(){
             poligono(14,posIniyX,posIniyY,posIniyX+80,posIniyY+80) }
         if (figura.value=='value 6'){
             poligono(4,posIniyX,posIniyY,posIniyX+80,posIniyY+80) }
+        if (figura.value=='value 7'){
+            poligono(5,posIniyX,posIniyY,posIniyX+80,posIniyY+80) }
+        if (figura.value=='value 8'){
+            poligono(6,posIniyX,posIniyY,posIniyX+80,posIniyY+80) }
         if (posIniyY <= posy.value) {
         slowMotion();}else {
             posIniyY=30
@@ -139,6 +151,14 @@ function myFunction2(opcion){
     if(figura.value=="value 6"){
         cleanCanvas()
         poligono(4,posIniyX,posIniyY,posIniyX+80,posIniyY+80) 
+    }
+    if(figura.value=="value 7"){
+        cleanCanvas()
+        poligono(5,posIniyX,posIniyY,posIniyX+80,posIniyY+80) 
+    }
+    if(figura.value=="value 8"){
+        cleanCanvas()
+        poligono(6,posIniyX,posIniyY,posIniyX+80,posIniyY+80) 
     }
 }
 
