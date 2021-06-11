@@ -9,7 +9,7 @@
    <style></style>
 </head>
 
-<body>
+<body background="iconos/fondo4.jfif">
 
 <center>
     <h1> 
@@ -28,7 +28,11 @@
             <font SIZE = 8 face="Comic Sans MS,arial,verdana" color="black"         >s</font>  
         //
     </h1>
+</center>
 
+<input type="button" value="Inicio" class="btnregresar" onclick="location.href='inicio.html'">
+
+<center>
     <div id="padre">
         <div id="hermana">
             <h3> Paleta de colores:</h3>
@@ -43,10 +47,10 @@
             <div class="btn-group">
                 <img src="iconos/lapiz.png"                             class="btn-tools" id="btnDibujo">
                 <img src="iconos/linea.png"                             class="btn-tools" id="btnLinea">
-                <img src="iconos/contorno-de-forma-rectangular.png"     class="btn-tools" id="btnRectangulo">
+                <img src="iconos/contorno-de-forma-rectangular.png"     class="btn-tools" id="btnRectangulo"> <br>
                 <img src="iconos/oval.png"                              class="btn-tools" id="btnCirculo">
                 <img src="iconos/triangulo.png"                         class="btn-tools" id="btnTrianguloEqulilatero">
-                <img src="iconos/triangulo-rectangulo 1.png"            class="btn-tools" id="btnTrianguloRectangulo">
+                <img src="iconos/triangulo-rectangulo 2.png"            class="btn-tools" id="btnTrianguloRectangulo"> <br>
                 <img src="iconos/esquema-de-rombo.png"                  class="btn-tools" id="btnRombo">
                 <img src="iconos/forma-de-contorno-del-pentagono.png"   class="btn-tools" id="btnPentagono"> 
                 <img src="iconos/hexagono.png"                          class="btn-tools" id="btnHexagono">
@@ -60,35 +64,48 @@
         <canvas id='canvas' width="800" height="600"></canvas>
 
         <div id="hermano">
-            <h3>Animaciones</h3>
-                <Select>
-                    <option disabled selected="" class="textex">Seleccion de animacion</option>
-                    <option>Translacion</option>
-                    <option>Escalamiento</option>
+            <h2>Animaciones</h2>
+            <select id="select" name="menu" class="selection" onchange= "myFunction(this)">
+                <option value="Value 1" class="selection" >Seleccionar animacion</option>
+                <option value="value 2" >Traslacion X</option>
+                <option value="value 5" >Traslacion Y</option>
+                <option value="value 3" >Escalamiento Uniforme </option>
+                <option value="value 4">Escalamiento Diferencial</option> 
+            </select> <br><br>
+            <br>
+            <select id="figura" name="tipoFug" class="selection" onchange= "myFunction2(this)">
+                <option value="value 1" class="selection">Seleccionar figura</option>
+                <option value="value 2" >Rectangulo</option>
+                <option value="value 3" >Circulo </option>
+                <option value="value 4">Triangulo</option> 
+                <option value="value 5">Triangulo Rectangulo</option> 
+                <option value="value 6">Rombo</option> 
+                <option value="value 7">Pentagono</option> 
+                <option value="value 8">Hexagono</option> 
+            </select><br><br>
 
-                </Select>
-            
             <h3>
                 <label>Ingresa el valor en X: </label>
-                <input type="text" id="valX" placeholder="Inserte un número" class="entrada margen-inferior textex">
+                <input type="text" id="ValorX" disabled = "true" placeholder="Inserte un número" class="entrada margen-inferior textex">
             </h3>
     
             <h3>
-                <label>Ingresa el valor en valor en Y: </label>
-                <input type="text" id="valY" placeholder="Inserte un número" class="entrada margen-superior textex">
+                <label>Ingresa el valor en Y: </label>
+                <input type="text" id="ValorY" disabled = "true" placeholder="Inserte un número" class="entrada margen-superior textex">
             </h3>
     
             <h3>
                 <label>Ingresa el valor del Angulo: </label>
-                <input type="text" id="valY" placeholder="Inserte un número" class="entrada textex">
+                <input type="text" id="" placeholder="Inserte un número" class="entrada textex">
             </h3>
-            
+
             <h3>
-                <input type="checkbox" id="chbAnimar" />ANIMAR<br>
+
+                
             </h3>
     
             <h3>ANIMACION</h3>
-            <input type="button"  value="ANIMAR" class="boton" id="btnAnimar">
+            <input type="button"  value="ANIMAR" class="boton" id="btnAnimacion">
 
             <h3>LIMPIAR LIENZO </h3>
             <input type="button" value="LIMPIAR"  class="boton" id="btnLimpiar">
@@ -98,7 +115,9 @@
     </div>
 </center>
 
-    <script src="js/Core2.js"></script>
+<script src="js/Core.js"></script>
+<script src="js/Fuguras.js"></script>
+<script src="js/Animaciones.js"></script>
 </body>
 </html>
 
