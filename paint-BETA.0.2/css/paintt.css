@@ -7,6 +7,7 @@
     position: relative;
     border: 3px solid #000000;
     box-sizing: border-box;
+    background-color: #ffffff;
 }
 
 
@@ -19,7 +20,7 @@
     box-sizing: border-box;
     box-shadow: inset 0px 4px 4px rgba(54, 44, 44, 0.25);
     border-radius: 5px;
-    background: rgba(102, 110, 114, 0.692);
+    background: rgb(171, 175, 177);
     
 }
 
@@ -33,14 +34,19 @@
     box-sizing: border-box;
     box-shadow: inset 0px 4px 4px rgba(54, 44, 44, 0.25);
     border-radius: 4px;
-    background: rgba(102, 110, 114, 0.692);
+    background: rgb(171, 175, 177);
 
+}
+#tuto{
+    background:rgb(248, 249, 250);
+    top: 40%;;
+    right:10%;
+    width:53%;
 }
 
 
 body{
     background-color:#ffffff;
-    
 }
 
 
@@ -60,7 +66,10 @@ body{
 }
 .textex{
     background: rgb(116, 139, 141);
+}
 
+.selection{
+    width: 80%;    
 }
 
 .btn-tools{
@@ -73,7 +82,44 @@ body{
 }
 
 .tab{
-    background: rgba(148, 156, 160);
-    border: 3px solid rgba(148, 156, 160);
+    background: rgb(171, 175, 177);
+    border: 3px solid rgb(171, 175, 177);
 
+}
+
+#barra{
+    position: absolute;
+    background:rgba(248, 249, 250, 0.705);
+    top: 40%;;
+    right:10%;
+    width:80%;
+}
+
+.btninicio{
+    position: absolute;
+    background: #abddff;
+    border: 4px solid #181755;
+    margin-top: 25%;
+    right:36%;
+    width: 12%;
+    height: 5%;
+}
+
+.btntuto{
+    position: absolute;
+    background: #abddff;
+    border: 4px solid #181755;
+    margin-top: 25%;
+    right: 55%;
+    width: 12%;
+    height: 5%;
+}
+
+.btnregresar{
+    background: #abddff;
+    border: 4px solid #181755;
+    position: absolute;
+    margin-top: -4%;
+    left: 85%;
+    width: 8%;
 }
