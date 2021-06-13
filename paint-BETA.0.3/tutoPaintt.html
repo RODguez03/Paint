@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAINT</title>
+    <link rel="stylesheet" href="css/paintt.css">
+   <style></style>
+</head>
+
+<body background="iconos/fondo3.jpg">
+
+<center>
+    <h1> 
+        //  <font SIZE = 8 face="Comic Sans MS,arial,verdana" color="red"           >D</font>
+            <font SIZE = 8 face="Comic Sans MS,arial,verdana" color="aqua"          >r</font>
+            <font SIZE = 8 face="Comic Sans MS,arial,verdana" color="blue"          >a</font>
+            <font SIZE = 8 face="Comic Sans MS,arial,verdana" color="gray"          >w</font>
+            <font SIZE = 8 face="Comic Sans MS,arial,verdana" color="DarkTurquoise" >i</font>
+            <font SIZE = 8 face="Comic Sans MS,arial,verdana" color="green"         >n</font>
+            <font SIZE = 8 face="Comic Sans MS,arial,verdana" color="marron"        >g</font>
+            <font SIZE = 8 face="Comic Sans MS,arial,verdana" color="navy"          >C</font>
+            <font SIZE = 8 face="Comic Sans MS,arial,verdana" color="olive"         >a</font>
+            <font SIZE = 8 face="Comic Sans MS,arial,verdana" color="SandyBrown"    >n</font>
+            <font SIZE = 8 face="Comic Sans MS,arial,verdana" color="teal"          >v</font>
+            <font SIZE = 8 face="Comic Sans MS,arial,verdana" color="Tan"           >a</font>
+            <font SIZE = 8 face="Comic Sans MS,arial,verdana" color="black"         >s</font>  
+        //
+    </h1>
+</center>
+
+<input type="button" value="Inicio" class="btnregresar" onclick="location.href='inicio.html'">
+
+<center>
+    <div id="padre">
+        <div id="hermana">
+            <h3> Paleta de colores:</h3>
+
+            <input type="color" id="colorsito" name="color" oninput="defcolor(this.value);" class="botonpaleta">
+            <hr size="20"class="tab">
+            
+            <h3><input id='Relleno' type="checkbox" value="Relleno"  />Rellenado<br></h3>
+            <hr size="20" class="tab">
+      
+            <h3>Herramientas:</h3>    
+            <div class="btn-group">
+                <img src="iconos/lapiz.png"                             class="btn-tools" id="btnDibujo">
+                <img src="iconos/linea.png"                             class="btn-tools" id="btnLinea">
+                <img src="iconos/contorno-de-forma-rectangular.png"     class="btn-tools" id="btnRectangulo"> <br>
+                <img src="iconos/oval.png"                              class="btn-tools" id="btnCirculo">
+                <img src="iconos/triangulo.png"                         class="btn-tools" id="btnTrianguloEqulilatero">
+                <img src="iconos/triangulo-rectangulo 2.png"            class="btn-tools" id="btnTrianguloRectangulo"> <br>
+                <img src="iconos/esquema-de-rombo.png"                  class="btn-tools" id="btnRombo">
+                <img src="iconos/forma-de-contorno-del-pentagono.png"   class="btn-tools" id="btnPentagono"> 
+                <img src="iconos/hexagono.png"                          class="btn-tools" id="btnHexagono">
+            </div>
+            <hr size="20" class="tab">
+
+            <h3>Grosor</h3>
+            <input type="range" oninput="defgrosor(this.value);" min="1" max="10" value = "1" id="grosor">
+        </div>
+
+        <canvas id='canvas' width="800" height="600"></canvas>
+
+        <div id="hermano">
+            <h2>Animaciones</h2>
+            <select id="select" name="menu" class="selection" onchange= "myFunction(this) , seleccion()">
+                <option value="Value 1" class="selection" >Seleccionar animacion</option>
+                <option value="value 2" >Traslacion X</option>
+                <option value="value 5" >Traslacion Y</option>
+                <option value="value 3" >Escalamiento Uniforme </option>
+                <option value="value 4">Escalamiento Diferencial</option> 
+            </select> <br><br>
+            <br>
+            <select id="figura" name="tipoFug" class="selection" onchange= "myFunction2(this)">
+                <option value="value 1" class="selection">Seleccionar figura</option>
+                <option value="value 2" >Rectangulo</option>
+                <option value="value 3" >Circulo </option>
+                <option value="value 4">Triangulo</option> 
+                <option value="value 5">Triangulo Rectangulo</option> 
+                <option value="value 6">Rombo</option> 
+                <option value="value 7">Pentagono</option> 
+                <option value="value 8">Hexagono</option> 
+            </select><br><br>
+
+            <h3>
+                <label>Ingresa el valor en X: </label>
+                <input type="text" id="ValorX" disabled = "true" placeholder="Inserte un número" class="entrada margen-inferior textex">
+            </h3>
+    
+            <h3>
+                <label>Ingresa el valor en Y: </label>
+                <input type="text" id="ValorY" disabled = "true" placeholder="Inserte un número" class="entrada margen-superior textex">
+            </h3>
+    
+            <h3>
+               
+            </h3>
+
+            <h3>
+
+                
+            </h3>
+    
+            <h3>ANIMACION</h3>
+            <input type="button"  value="ANIMAR" class="boton" id="btnAnimacion">
+
+            <h3>LIMPIAR LIENZO </h3>
+            <input type="button" value="LIMPIAR"  class="boton" id="btnLimpiar">
+           
+        </div>
+    
+    </div>
+</center>
+
+<script src="js/Coretuto.js"></script>
+<script src="js/Fuguras.js"></script>
+<script src="js/Animaciones2.js"></script>
+</body>
+</html>
+
+
